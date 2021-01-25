@@ -57,13 +57,13 @@ AS SELECT d."DataSetID" AS datasetid,
    ON d."CodeID" = l."CodeID"
   ORDER BY d."DataSetID", d."EntitySortOrder";
 
- ALTER TABLE mb2eml_r.vw_eml_attributecodedefinition OWNER TO %db_owner%;
+ ALTER TABLE mb2eml_r.vw_eml_attributecodedefinition OWNER TO gmaurer;
 
 REVOKE ALL ON TABLE mb2eml_r.vw_eml_attributecodedefinition FROM PUBLIC;
-REVOKE ALL ON TABLE mb2eml_r.vw_eml_attributecodedefinition FROM %db_owner%;
+REVOKE ALL ON TABLE mb2eml_r.vw_eml_attributecodedefinition FROM gmaurer;
 GRANT SELECT,INSERT,UPDATE ON TABLE mb2eml_r.vw_eml_attributecodedefinition TO read_write_user;
 GRANT SELECT ON TABLE mb2eml_r.vw_eml_attributecodedefinition TO read_only_user;
-GRANT ALL ON TABLE mb2eml_r.vw_eml_attributecodedefinition TO %db_owner%;
+GRANT ALL ON TABLE mb2eml_r.vw_eml_attributecodedefinition TO gmaurer;
 
 
 -- record patch applied
