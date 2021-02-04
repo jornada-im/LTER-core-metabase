@@ -8,4 +8,6 @@ CREATE DATABASE lter_core_metabase
     ENCODING = 'UTF8'
     LC_COLLATE = 'en_US.UTF-8'
     LC_CTYPE = 'en_US.UTF-8'
-    CONNECTION LIMIT = -1;
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    TEMPLATE=template0;
